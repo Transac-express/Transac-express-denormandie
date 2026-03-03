@@ -1,0 +1,89 @@
+{
+  "name": "Property",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Titre du bien"
+    },
+    "address": {
+      "type": "string",
+      "description": "Adresse compl\u00e8te"
+    },
+    "city": {
+      "type": "string",
+      "description": "Ville"
+    },
+    "price": {
+      "type": "number",
+      "description": "Prix de vente"
+    },
+    "surface": {
+      "type": "number",
+      "description": "Surface en m\u00b2"
+    },
+    "rooms": {
+      "type": "number",
+      "description": "Nombre de pi\u00e8ces"
+    },
+    "bedrooms": {
+      "type": "number",
+      "description": "Nombre de chambres"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description d\u00e9taill\u00e9e"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs des images"
+    },
+    "main_image": {
+      "type": "string",
+      "description": "Image principale"
+    },
+    "eligible_denormandie": {
+      "type": "boolean",
+      "default": true,
+      "description": "\u00c9ligible au dispositif Denormandie"
+    },
+    "estimated_works": {
+      "type": "number",
+      "description": "Estimation des travaux"
+    },
+    "property_type": {
+      "type": "string",
+      "enum": [
+        "appartement",
+        "maison",
+        "immeuble"
+      ],
+      "description": "Type de bien"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "disponible",
+        "sous_compromis",
+        "vendu"
+      ],
+      "default": "disponible"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Caract\u00e9ristiques du bien"
+    }
+  },
+  "required": [
+    "title",
+    "price",
+    "surface",
+    "city"
+  ]
+}
